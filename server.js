@@ -3,6 +3,7 @@ import bodyParser from "express";
 import * as gcpMetadata from "gcp-metadata";
 
 const app = express();
+const PORT = process.env.PORT || 8080
 
 app.use(bodyParser.json());
 app.get('/',async (req, res) => {
@@ -19,6 +20,6 @@ app.get('/',async (req, res) => {
     }
 });
 
-app.listen(process.env.PORT || 3000, ()=>{
+app.listen(PORT, ()=>{
     console.log("app running")
 })
