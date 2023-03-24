@@ -18,6 +18,7 @@ app.get('/',async (req, res) => {
         const projectMetadata = await gcpMetadata.project();
         return res.send("Project metadata: " + projectMetadata)
     }
+    return res.send("Project metadata: ")
 });
 
 app.listen(PORT, ()=>{
